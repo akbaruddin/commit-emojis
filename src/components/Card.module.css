@@ -1,0 +1,50 @@
+.Card {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  width: calc(100% - 20px);
+  border-radius: 10px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
+  margin: 10px;
+  padding: 15px;
+}
+
+.Emo {
+  font-size: 80px;
+  padding-right: 15px;
+}
+
+.Title {
+  color: #cecfdd;
+  display: block;
+  font-size: 12px;
+}
+
+.Para {
+  margin-bottom: 10px;
+}
+
+.Code {
+  color: #121a60;
+  display: block;
+  font-size: 16px;
+}
+
+
+@media (min-width: 600px) {
+  .Card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (min-width: 992px) {
+  .Card {
+    width: calc(33% - 20px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .Card {
+    width: calc(25% - 20px);
+  }
+}
