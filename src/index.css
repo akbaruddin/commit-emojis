@@ -11,11 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body {
   background-color: #f2f6ff;
-  font-family: 'Nunito', sans-serif;
 }
 
 .section {
