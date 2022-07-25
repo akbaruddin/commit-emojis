@@ -1,0 +1,27 @@
+---
+const { item } = Astro.props;
+---
+
+<div class="shadow rounded col-span-12 md:col-span-6 lg:col-span-4 flex flex-wrap p-2 md:p-4">
+  <div class="w-full sm:w-1/2 flex justify-center items-center text-8xl mb-4 sm:mb-0 click">
+    {item.emoji}
+  </div>
+  <div class="w-full sm:w-1/2">
+    <div class="w-full mb-3">
+      <div class="w-full text-xs text-gray-400 mb-1">Name</div>
+      <div class="text-sm click">{item.name}</div>
+    </div>
+    <div class="w-full mb-3">
+      <div class="w-full text-xs text-gray-400 mb-1">Code</div>
+      <div class="text-sm click">{item.code}</div>
+    </div>
+    <div class="w-full mb-3">
+      <div class="w-full text-xs text-gray-400 mb-1">Entity</div>
+      <div class="text-sm click">{item.entity}</div>
+    </div>
+    <div class="w-full">
+      <div class="w-full text-xs text-gray-400 mb-1">Description</div>
+      <div class="text-sm click">{item.description}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+---
+import Card from "../components/Card.astro";
+import { gitmojis } from "../data/emojis.json";
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Primary Meta Tags -->
+  <title>Commit emojis</title>
+  <meta name="title" content="Commit emojis">
+  <meta name="description" content="Make your commit good and visual effected with emojis.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://commit-emojis.vercel.app/">
+  <meta property="og:title" content="Commit emojis">
+  <meta property="og:description" content="Make your commit good and visual effected with emojis.">
+  <meta property="og:image"
+    content="https://user-images.githubusercontent.com/15226979/122504321-b423c380-d017-11eb-83f9-eb174558b03c.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://commit-emojis.vercel.app/">
+  <meta property="twitter:title" content="Commit emojis">
+  <meta property="twitter:description" content="Make your commit good and visual effected with emojis.">
+  <meta property="twitter:image"
+    content="https://user-images.githubusercontent.com/15226979/122504321-b423c380-d017-11eb-83f9-eb174558b03c.png">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106817086-1"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-106817086-1');
+  </script>
+</head>
+
+<body>
+  <main>
+    <div class="p-2 md:p-4">
+      <div class="bg-black text-white px-2 py-5 rounded-md text-2xl"
+        onclick="navigator.clipboard.writeText(this.innerText.replace('> ', ''))">> <span
+          class="text-yellow-100">git</span> commit <span class="text-gray-400">-m</span> <span
+          class="text-blue-300">"message 🚀"</span></div>
+    </div>
+    <div class="grid grid-cols-12 px-2 md:px-4 gap-4 my-2 md:my-4">
+      {gitmojis.map((item) => (
+      <Card item={item} />
+      ))}
+    </div>
+  </main>
+
+
+  <script is:inline>
+    const cards = document.querySelectorAll(".click");
+    cards.forEach(card => {
+      card.addEventListener("click", (e) => {
+        navigator.clipboard.writeText(e.target.innerText);
+      });
+    });
+  </script>
+</body>
+
+</html>
