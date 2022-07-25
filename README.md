@@ -1,42 +1,58 @@
-# Welcome to [Astro](https://astro.build)
+# Commit Emojis
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+<p align="center">
+  <a href="https://commit-emojis.vercel.app/?ref=github" target="_blank" rel="noopener noreferrer">
+    <img width="600" src="https://user-images.githubusercontent.com/15226979/122504321-b423c380-d017-11eb-83f9-eb174558b03c.png" alt="Commit Emojis">
+  </a>
+</p>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[![CodeFactor](https://www.codefactor.io/repository/github/akbaruddin/commit-emojis/badge)](https://www.codefactor.io/repository/github/akbaruddin/commit-emojis)
 
-## 🚀 Project Structure
+# Commit Emojis 💬
 
-Inside of your Astro project, you'll see the following folders and files:
+## Tech Stack
 
+**Client:** Astro build, Tailwind CSS
+
+## Run Locally 🛠
+
+Clone the project
+
+```bash
+  git clone https://github.com/akbaruddin/commit-emojis.git
 ```
-/
-├── public/
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+
+Go to the project directory
+
+```bash
+  cd commit-emojis
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Install dependencies
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components or layouts.
+```bash
+  yarn install
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+Start the server
 
-## 🧞 Commands
+```bash
+  yarn dev
+```
 
-All commands are run from the root of the project, from a terminal:
+## Deployment 🌏
 
-| Command           | Action                                       |
-| :---------------- | :------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
+To deploy this project run
 
-## 👀 Want to learn more?
+```bash
+  yarn build
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Authors ✨
+
+- [@akbar](https://github.com/akbaruddin)
+
+## Contributors ⚔️
+
+- [@akbar](https://github.com/akbaruddin)
