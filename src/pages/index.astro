@@ -43,11 +43,12 @@ import { gitmojis } from "../data/emojis.json";
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" as="style">
   <link href="https://www.googletagmanager.com/gtag/js?id=G-39MDJQTF3W" rel="preload" as="script">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
-<body>
+<body class="antialiased min-h-screen">
   <main>
     <div class="p-2 md:p-4">
       <div class="bg-black text-white px-2 py-5 rounded-md text-2xl"
@@ -85,7 +86,6 @@ import { gitmojis } from "../data/emojis.json";
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-39MDJQTF3W');
   </script>
 </body>
