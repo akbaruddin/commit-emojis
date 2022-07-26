@@ -4,7 +4,7 @@ import { gitmojis } from "../data/emojis.json";
 ---
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -14,6 +14,14 @@ import { gitmojis } from "../data/emojis.json";
   <title>Commit emojis</title>
   <meta name="title" content="Commit emojis">
   <meta name="description" content="Make your commit good and visual effected with emojis.">
+  <meta name="theme-color" content="#fff">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://user-images.githubusercontent.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -35,13 +43,15 @@ import { gitmojis } from "../data/emojis.json";
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link href="https://www.googletagmanager.com/gtag/js?id=G-39MDJQTF3W" rel="preload" as="script">
 </head>
 
 <body>
   <main>
     <div class="p-2 md:p-4">
       <div class="bg-black text-white px-2 py-5 rounded-md text-2xl"
-        onclick="navigator.clipboard.writeText(this.innerText.replace('> ', ''))">> <span
+        onclick="navigator.clipboard.writeText(this.innerText.replace('> ', ''))">&gt; <span
           class="text-yellow-100">git</span> commit <span class="text-gray-400">-m</span> <span
           class="text-blue-300">"message 🚀"</span></div>
     </div>
@@ -52,21 +62,30 @@ import { gitmojis } from "../data/emojis.json";
     </div>
   </main>
 
-
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script is:inline>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js', { scope: '/' })
+    }
     const cards = document.querySelectorAll(".click");
     cards.forEach(card => {
       card.addEventListener("click", (e) => {
         navigator.clipboard.writeText(e.target.innerText);
+        Toastify({
+          text: `${e.target.innerText} copied.`,
+          duration: 3000,
+          gravity: "top",
+          position: "center"
+        }).showToast();
       });
     });
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-39MDJQTF3W"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-  
+
     gtag('config', 'G-39MDJQTF3W');
   </script>
 </body>
